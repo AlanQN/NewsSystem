@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">简易新闻</string>
+    <string name="news_title">马云虞锋闭门对话：3小时谈透变革大势，定调千亿美元目标</string>
+    <string name="news_author">新闻作者</string>
+    <string name="contents_count">评论数量</string>
+    <string name="publish_time">17:37</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

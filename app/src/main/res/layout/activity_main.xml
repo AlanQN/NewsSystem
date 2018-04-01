@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+    <!-- 主界面 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimary">
+            <ImageView
+                android:id="@+id/user_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/user"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"/>
+            <include
+                android:id="@+id/search_box"
+                layout="@layout/search_image" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/logo"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"/>
+        </LinearLayout>
+
+
+        <com.news.android.newssystem.view.MyViewPager
+            android:id="@+id/aa_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:tab_visible_count="6">
+
+        </com.news.android.newssystem.view.MyViewPager>
+    </LinearLayout>
+
+    <!-- NavigationView -->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/user_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/activity_navigation_header"
+        app:menu="@menu/activity_navigation_menu">
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

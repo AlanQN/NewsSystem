@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.news.android.newssystem.RecordActivity">
+    
+    <com.news.android.newssystem.view.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:title_text="阅读记录"
+        app:title_text_color="@color/colorSlowBlue"
+        app:right_text="编辑"
+        app:right_text_color="@color/colorSlowBlue">
+    </com.news.android.newssystem.view.TitleBar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/record_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorWhite">
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/delete_box"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:background="@color/colorWhite"
+        android:visibility="gone">
+        <Button
+            android:id="@+id/all_select_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/fontColor"
+            android:background="@null"
+            android:text="全选"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorSlowGray"/>
+        <Button
+            android:id="@+id/delete_select_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/fontColor"
+            android:background="@null"
+            android:text="删除"/>
+    </LinearLayout>
+
+</LinearLayout>
