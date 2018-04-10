@@ -230,7 +230,9 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
                 String searchText = searchBox.getText().toString().trim();
                 //隐藏软键盘
                 InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
+                if (imm != null) {
+                    imm.hideSoftInputFromWindow(searchBtn.getWindowToken(), 0);
+                }
                 //搜索框失去焦点
                 searchBox.clearFocus();
                 //如果文本不为空，执行搜索
